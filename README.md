@@ -98,3 +98,7 @@ belong to? Could their expression levels serve as diagnostic biomarkers?
 - **Seaborn** — statistical visualizations
 - **ucimlrepo** — dataset retrieval from UCI ML Repository
 - **Jupyter Notebook** — interactive analysis environment
+
+**Note:** Data files are not included due to size. Download them directly from 
+[UCI ML Repository](https://archive.ics.uci.edu/dataset/401/gene+expression+cancer+rna+seq)
+or load via `ucimlrepo` as shown in the notebook.
