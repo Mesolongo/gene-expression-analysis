@@ -3,7 +3,7 @@
 ## Overview
 
 This project performs an exploratory data analysis (EDA) on RNA-seq gene expression data
-from The Cancer Genome Atlas (TCGA) to explore whether gene expression patterns can 
+from The Cancer Genome Atlas (TCGA) to explore whether gene expression patterns can
 distinguish between different cancer types and identify candidate biomarker genes.
 
 - **Dataset:** Gene Expression Cancer RNA-Seq — UCI ML Repository / TCGA
@@ -13,20 +13,20 @@ distinguish between different cancer types and identify candidate biomarker gene
 
 ## Project Structure
 
-gene-expression-analysis/
-│
-├── data/
-│   ├── data.csv
-│   └── labels.csv
-├── images/
-│   ├── class_distribution.png
-│   ├── top20_gene_distributions.png
-│   ├── top20_gene_boxplots.png
-│   └── top20_gene_correlation_matrix.png
-├── notebook/
-│   └── notebook.ipynb
-├── requirements.txt
-└── README.md
+    gene-expression-analysis/
+    │
+    ├── data/
+    │   ├── data.csv
+    │   └── labels.csv
+    ├── images/
+    │   ├── class_distribution.png
+    │   ├── top20_gene_distributions.png
+    │   ├── top20_gene_boxplots.png
+    │   └── top20_gene_correlation_matrix.png
+    ├── notebook/
+    │   └── notebook.ipynb
+    ├── requirements.txt
+    └── README.md
 
 ## Methodology
 
@@ -40,24 +40,24 @@ gene-expression-analysis/
 
 ## Key Findings
 
-- The dataset is **class imbalanced** — BRCA (Breast Cancer) accounts for 37.5% of samples 
+- The dataset is **class imbalanced** — BRCA (Breast Cancer) accounts for 37.5% of samples
 (300/801), reflecting historical prioritization in TCGA data collection
-- Gene expression distributions are predominantly **right-skewed**, consistent with typical 
+- Gene expression distributions are predominantly **right-skewed**, consistent with typical
 RNA-seq data where most genes are lowly expressed
-- Several genes show **bimodal distributions**, suggesting distinct expression subgroups 
+- Several genes show **bimodal distributions**, suggesting distinct expression subgroups
 across cancer types
-- Genes **3541**, **3540**, and **15897** show the strongest separation across cancer types 
+- Genes **3541**, **3540**, and **15897** show the strongest separation across cancer types
 in group comparison analysis — strong biomarker candidates
-- **BRCA** consistently displays the most distinct expression profile compared to other 
+- **BRCA** consistently displays the most distinct expression profile compared to other
 cancer types
-- Genes **4773**, **8891**, and **15301** form a tightly correlated cluster (*r = 0.99*), 
+- Genes **4773**, **8891**, and **15301** form a tightly correlated cluster (*r* = 0.99),
 suggesting shared regulatory mechanisms or pathway membership
-- **Gene 19661** shows a strong negative correlation with this cluster (*r* = −0.93), 
-potentially reflecting competing regulatory mechanisms — a phenomenon commonly observed 
+- **Gene 19661** shows a strong negative correlation with this cluster (*r* = −0.93),
+potentially reflecting competing regulatory mechanisms — a phenomenon commonly observed
 in cancer biology
 
 ### Open Research Question
-> What are genes 4773, 8891, 15301, and 19661, and which biological pathways do they 
+> What are genes 4773, 8891, 15301, and 19661, and which biological pathways do they
 belong to? Could their expression levels serve as diagnostic biomarkers?
 
 ## Visualizations
@@ -77,18 +77,21 @@ belong to? Could their expression levels serve as diagnostic biomarkers?
 ## How to Run
 
 1. Clone the repository:
-```bash
-   git clone https://github.com/Mesolongo/gene-expression-eda.git
-   cd gene-expression-eda
-```
+
+       git clone https://github.com/Mesolongo/gene-expression-analysis.git
+       cd gene-expression-analysis
+
 2. Install dependencies:
-```bash
-   pip install -r requirements.txt
-```
+
+       pip install -r requirements.txt
+
 3. Open the notebook:
-```bash
-   jupyter notebook notebook/notebook.ipynb
-```
+
+       jupyter notebook notebook/notebook.ipynb
+
+> **Note:** Data files are not included due to size. Download them directly from
+> [UCI ML Repository](https://archive.ics.uci.edu/dataset/401/gene+expression+cancer+rna+seq)
+> or load via `ucimlrepo` as shown in the notebook.
 
 ## Tools Used
 
@@ -98,7 +101,3 @@ belong to? Could their expression levels serve as diagnostic biomarkers?
 - **Seaborn** — statistical visualizations
 - **ucimlrepo** — dataset retrieval from UCI ML Repository
 - **Jupyter Notebook** — interactive analysis environment
-
-**Note:** Data files are not included due to size. Download them directly from 
-[UCI ML Repository](https://archive.ics.uci.edu/dataset/401/gene+expression+cancer+rna+seq)
-or load via `ucimlrepo` as shown in the notebook.
